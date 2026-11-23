@@ -1,0 +1,37 @@
+@use "../base/variables" as v;
+
+// Общие свойства кнопок с параметрами для основного и компактного размера.
+@mixin button-variant($padding, $background, $color, $hover) {
+  padding: $padding;
+  background: $background;
+  color: $color;
+  &:hover { background: $hover; }
+}
+
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 0.75rem; width: fit-content; min-height: 2.55rem; border: 0; border-radius: 0.35rem; text-decoration: none; font-weight: 700; line-height: 1.25; text-align: center; }
+.button--primary {
+  @include button-variant(0.92rem 1.2rem, v.$brick, #fff, v.$brick-hover);
+}
+.button--small {
+  @include button-variant(0.58rem 0.72rem, var(--subtle), var(--ink), var(--line));
+}
+
+.theme-toggle {
+  position: fixed;
+  z-index: 8;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  display: grid;
+  place-items: center;
+  width: 3.35rem;
+  height: 3.35rem;
+  border: 1px solid var(--field-border);
+  border-radius: 50%;
+  background: var(--card);
+  color: var(--accent-ink);
+  box-shadow: 0 3px 12px #20141d1c;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.theme-toggle__icon { font-size: 1.75rem; line-height: 1; }
+
+:root[data-theme="dark"] main:not(.hero) .button--small { border: 1px solid var(--line); }

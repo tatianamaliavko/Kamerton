@@ -1,0 +1,4 @@
+.order { padding: clamp(1rem, 2.3vw, 1.5rem); }
+.order h2 { font-size: clamp(1.4rem, 2vw, 1.8rem); }
+.order__total { display: flex; justify-content: space-between; gap: 0.6rem; margin-top: 1rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--line); }
+.order__total strong { white-space: nowrap; }

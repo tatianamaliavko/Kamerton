@@ -1,0 +1,6 @@
+.catalog-controls { padding-block: 0.8rem; border-bottom: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 0.9rem; justify-content: space-between; align-items: center; }
+.filters { display: flex; flex-wrap: wrap; gap: 0.38rem; }
+.filters button { padding: 0.52rem 0.72rem; border: 1px solid var(--line); border-radius: 0.35rem; background: var(--card); color: var(--ink); font-weight: 650; font-size: 0.89rem; }
+.filters button[aria-pressed="true"] { background: var(--masthead); color: #fff; border-color: var(--masthead); }
+.filters button:hover { border-color: var(--ink); }
+.results-count { margin: 0.85rem 0 0.9rem; color: var(--muted); font-size: 0.88rem; }

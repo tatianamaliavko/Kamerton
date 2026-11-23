@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Камертон — магазин музыкальных инструментов.">
+    <title>Карточка товара — Камертон</title>
+    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>КАМЕРТОН</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html" aria-current="location">Каталог</a>
+          <a class="nav-cart" href="cart.html">Корзина <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="room-corner room-corner--product">
+      <section class="shell section" aria-label="Инструмент">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><a href="catalog.html">Каталог</a><span data-crumb>Товар</span></nav>
+        <article class="product-detail" data-product></article>
+      </section>
+      <section class="shell section section--continuous" data-related-section aria-labelledby="related-title" hidden>
+        <div class="section-heading"><h2 id="related-title">Другие в категории</h2></div>
+        <div class="product-grid" data-related></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div><a class="brand" href="index.html">КАМЕРТОН</a><p>Музыкальные инструменты и аксессуары</p></div>
+        <nav aria-label="Разделы каталога"><a href="catalog.html?category=guitars">Гитары</a><a href="catalog.html?category=keys">Клавишные</a><a href="catalog.html?category=drums">Ударные</a><a href="catalog.html?category=accessories">Аксессуары</a></nav>
+      </div>
+    </footer>
+    <button class="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему"><span class="theme-toggle__icon" aria-hidden="true">☾</span></button>
+  </body>
+</html>

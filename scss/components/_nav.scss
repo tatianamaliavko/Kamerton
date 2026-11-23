@@ -1,0 +1,4 @@
+.site-nav { display: flex; align-items: center; gap: clamp(0.7rem, 2.4vw, 1.8rem); }
+.site-nav a { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0; border-bottom: 1px solid transparent; color: var(--masthead-soft); font-size: clamp(0.94rem, 1.8vw, 1.1rem); font-weight: 600; text-decoration: none; }
+.site-nav [aria-current], .site-nav a:hover { border-bottom-color: var(--masthead-ink); color: var(--masthead-ink); }
+.nav-cart span { min-width: 1.6rem; padding: 0.08rem 0.22rem; border-radius: 2rem; background: #fff; color: #79152a; text-align: center; font-weight: 750; font-size: 0.8rem; }

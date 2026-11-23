@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Камертон — магазин музыкальных инструментов.">
+    <title>Корзина — Камертон</title>
+    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>КАМЕРТОН</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a class="nav-cart" href="cart.html" aria-current="page">Корзина <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="room-corner room-corner--cart">
+      <section class="shell section" aria-labelledby="cart-title">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>Корзина</span></nav>
+        <div class="section-heading page-heading"><h1 id="cart-title">Корзина</h1><a href="catalog.html">К покупкам <span aria-hidden="true">↗</span></a></div>
+        <p class="confirmation" role="status" data-order-status hidden></p>
+        <div class="cart-empty panel" data-empty>
+          <h2>Корзина пуста</h2><p>Загляни в каталог и выбери инструмент.</p>
+          <a class="button button--primary" href="catalog.html">Перейти в каталог</a>
+        </div>
+        <div class="cart-layout" data-cart-layout hidden>
+          <div class="cart-items panel" data-cart-items></div>
+          <aside class="order panel">
+            <h2>Оформление заказа</h2>
+            <p class="order__total"><span>Итого</span><strong data-total></strong></p>
+            <form id="order-form" novalidate>
+              <label for="customer">Имя</label><input id="customer" name="customer" maxlength="70" autocomplete="given-name" placeholder="Например, Анна" aria-describedby="customer-error" required><p class="field-error" id="customer-error" hidden></p>
+              <label for="email">Электронная почта</label><input id="email" name="email" type="email" maxlength="254" autocomplete="email" placeholder="name@example.com" aria-describedby="email-error" required><p class="field-error" id="email-error" hidden></p>
+              <button class="button button--primary" type="submit">Оформить заказ</button>
+            </form>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div><a class="brand" href="index.html">КАМЕРТОН</a><p>Музыкальные инструменты и аксессуары</p></div>
+        <nav aria-label="Разделы каталога"><a href="catalog.html?category=guitars">Гитары</a><a href="catalog.html?category=keys">Клавишные</a><a href="catalog.html?category=drums">Ударные</a><a href="catalog.html?category=accessories">Аксессуары</a></nav>
+      </div>
+    </footer>
+    <button class="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему"><span class="theme-toggle__icon" aria-hidden="true">☾</span></button>
+  </body>
+</html>

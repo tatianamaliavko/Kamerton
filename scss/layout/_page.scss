@@ -1,0 +1,32 @@
+@use "../base/variables" as v;
+
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.shell { width: min(calc(100% - 4rem), v.$wide); margin-inline: auto; }
+.section { padding-block: clamp(2.5rem, 6vw, 5.25rem); }
+.section--continuous { padding-top: 0; }
+.section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 0.8rem 1.5rem; margin-bottom: 1.55rem; }
+.section-heading p { margin-top: 0.65rem; color: var(--muted); }
+.section-heading > a {
+  color: var(--accent-ink);
+  font-weight: 650;
+  text-decoration: none;
+}
+.section-heading > a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.28em;
+}
+.page-heading { margin: 1rem 0 1.7rem; }
+.page-heading h1 { color: var(--ink); }
+.breadcrumbs { display: flex; flex-wrap: wrap; gap: 0.35rem 0.7rem; margin-bottom: 0.8rem; color: var(--muted); font-size: 0.87rem; }
+.breadcrumbs a::after { content: " /"; display: inline-block; padding-left: 0.55rem; text-decoration: none; }
+@media (max-width: v.$mobile) { .shell { width: calc(100% - 2rem); } }
+
+
+.home-featured {
+  border-top: 1px solid var(--line);
+  padding-top: clamp(1.75rem, 4vw, 3.15rem);
+}
+.room-corner--catalog .page-heading,
+.room-corner--cart .page-heading { padding-bottom: 0.55rem; }

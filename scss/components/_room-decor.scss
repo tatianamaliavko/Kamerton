@@ -1,0 +1,56 @@
+/* Ноты и винил остаются в полях за пределами рабочей колонки. */
+.room-corner, .category-band { position: relative; isolation: isolate; overflow: hidden; }
+.category-band { background: var(--category-surface); }
+.category-band h2, .category-band .section-heading > a { color: var(--accent-ink); }
+.category-band .category-card__copy > span {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-top: -0.1rem;
+  border-radius: 50%;
+  background: var(--category-surface);
+  color: var(--accent-ink);
+}
+
+@media (min-width: 82rem) {
+  .room-corner::before, .room-corner::after,
+  .category-band::before, .category-band::after {
+    position: absolute;
+    z-index: -1;
+    width: min(11.5rem, calc((100% - 76rem) / 2));
+    height: 16rem;
+    pointer-events: none;
+    content: "";
+  }
+  .room-corner::before, .category-band::before {
+    top: 2.4rem;
+    left: 0;
+    background: url("../assets/score-corner.svg") left center / 115% auto no-repeat;
+    filter: grayscale(1);
+    opacity: 0.29;
+    mask-image: linear-gradient(90deg, black 15%, transparent);
+  }
+  .room-corner::after, .category-band::after {
+    right: 0;
+    bottom: 2.8rem;
+    background: url("../assets/vinyl-corner.svg") right center / 130% auto no-repeat;
+    filter: grayscale(1);
+    opacity: 0.22;
+    mask-image: linear-gradient(270deg, black 10%, transparent);
+  }
+  :root[data-theme="dark"] .room-corner::before,
+  :root[data-theme="dark"] .category-band::before { opacity: 0.19; }
+}
+
+.category-band .section-heading {
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid var(--line);
+}
+.category-band .section-heading h2 {
+  text-wrap: balance;
+}
+.category-card__media {
+  border-bottom: 2px solid var(--masthead);
+}

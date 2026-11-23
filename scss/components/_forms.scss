@@ -1,0 +1,61 @@
+#order-form { display: grid; gap: 0.5rem; margin-top: 1.2rem; }
+#order-form label, .sort { font-size: 0.88rem; font-weight: 650; }
+#order-form input {
+  min-width: 0;
+  padding: 0.6rem 0.65rem;
+  border: 1px solid var(--field-border);
+  border-radius: 0.32rem;
+  background: var(--field);
+  color: var(--ink);
+}
+#order-form input { margin-bottom: 0.45rem; }
+#order-form .button { margin-top: 0.2rem; width: 100%; }
+.sort { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; }
+.field-error { margin: -0.35rem 0 0.45rem; color: var(--error); font-size: 0.88rem; }
+#order-form [aria-invalid="true"] { border-color: var(--error); }
+
+.sort-picker { position: relative; }
+.sort-picker summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 10.25rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--field-border);
+  border-radius: 0.32rem;
+  background: var(--field);
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+.sort-picker summary::-webkit-details-marker { display: none; }
+.sort-arrow { width: 0.47rem; height: 0.47rem; border: solid currentColor; border-width: 0 1.5px 1.5px 0; transform: rotate(45deg) translateY(-0.1rem); }
+.sort-picker[open] .sort-arrow { transform: rotate(225deg); }
+.sort-options {
+  position: absolute;
+  z-index: 4;
+  right: 0;
+  top: calc(100% + 0.25rem);
+  min-width: 100%;
+  width: max-content;
+  max-width: min(16rem, calc(100vw - 2rem));
+  padding: 0.25rem;
+  border: 1px solid var(--field-border);
+  border-radius: 0.35rem;
+  background: var(--field);
+  color: var(--ink);
+  box-shadow: 0 0.35rem 0.9rem #30222930;
+}
+.sort-options button {
+  display: block;
+  width: 100%;
+  padding: 0.48rem 0.65rem;
+  border: 0;
+  border-radius: 0.2rem;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+.sort-options button[aria-pressed="true"] { color: var(--accent-ink); font-weight: 750; background: var(--subtle); }
+.sort-options button:hover, .sort-options button:focus-visible { background: var(--subtle); }

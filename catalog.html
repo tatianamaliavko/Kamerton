@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Камертон — магазин музыкальных инструментов.">
+    <title>Каталог — Камертон</title>
+    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>КАМЕРТОН</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="index.html">Главная</a>
+          <a href="catalog.html" aria-current="page">Каталог</a>
+          <a class="nav-cart" href="cart.html">Корзина <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="room-corner room-corner--catalog">
+      <section class="shell section catalog" aria-labelledby="catalog-title">
+        <nav class="breadcrumbs" aria-label="Хлебные крошки"><a href="index.html">Главная</a><span>Каталог</span></nav>
+        <div class="section-heading page-heading"><div><h1 id="catalog-title">Каталог</h1><p>Гитары, клавишные, ударные и аксессуары для дома, студии и сцены.</p></div></div>
+        <div class="catalog-controls">
+          <div class="filters" role="group" aria-label="Категория инструмента">
+            <button type="button" data-category="all" aria-pressed="true">Все</button>
+            <button type="button" data-category="guitars" aria-pressed="false">Гитары</button>
+            <button type="button" data-category="keys" aria-pressed="false">Клавишные</button>
+            <button type="button" data-category="drums" aria-pressed="false">Ударные</button>
+            <button type="button" data-category="accessories" aria-pressed="false">Аксессуары</button>
+          </div>
+          <div class="sort">
+            <span id="sort-label">Сортировка</span>
+            <details class="sort-picker" id="sort-picker">
+              <summary aria-labelledby="sort-label sort-value"><span id="sort-value">По умолчанию</span><span aria-hidden="true" class="sort-arrow"></span></summary>
+              <div class="sort-options" role="group" aria-label="Способ сортировки">
+                <button type="button" data-sort="default" aria-pressed="true">По умолчанию</button>
+                <button type="button" data-sort="price-up" aria-pressed="false">Сначала дешевле</button>
+                <button type="button" data-sort="price-down" aria-pressed="false">Сначала дороже</button>
+              </div>
+            </details>
+          </div>
+        </div>
+        <p class="results-count" role="status"></p>
+        <div class="product-grid" data-catalog></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div><a class="brand" href="index.html">КАМЕРТОН</a><p>Музыкальные инструменты и аксессуары</p></div>
+        <nav aria-label="Разделы каталога"><a href="catalog.html?category=guitars">Гитары</a><a href="catalog.html?category=keys">Клавишные</a><a href="catalog.html?category=drums">Ударные</a><a href="catalog.html?category=accessories">Аксессуары</a></nav>
+      </div>
+    </footer>
+    <button class="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему"><span class="theme-toggle__icon" aria-hidden="true">☾</span></button>
+  </body>
+</html>

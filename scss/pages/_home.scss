@@ -1,0 +1,116 @@
+@use "../base/variables" as v;
+
+.hero {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+.hero__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.88fr);
+  align-items: center;
+  gap: clamp(1.4rem, 7vw, 6rem);
+  padding-block: clamp(2rem, 4.2vw, 4rem);
+}
+.hero__copy { padding: 0.6rem 0; }
+.hero .eyebrow {
+  color: var(--accent-ink);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(2.9rem, 5.2vw, 5.15rem);
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+.hero h1 em {
+  color: var(--accent-ink);
+  font-weight: 400;
+  font-style: italic;
+}
+.hero__intro { max-width: 34ch; margin: 1rem 0 1.35rem; color: var(--muted); }
+.hero__media {
+  position: relative;
+  display: grid;
+  align-items: end;
+  grid-template-columns: 1fr 0.27fr;
+  width: 100%;
+  max-width: 35rem;
+  margin: 0;
+  isolation: isolate;
+  padding-top: 1.15rem;
+}
+.hero__frame {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  aspect-ratio: 1.62;
+  background: var(--subtle);
+  border-left: clamp(0.28rem, 0.65vw, 0.55rem) solid var(--masthead);
+}
+.hero .eyebrow::before {
+  flex: none;
+  width: 2.1rem;
+  height: 0.48rem;
+  background: repeating-linear-gradient(0deg, currentColor 0 1px, transparent 1px 3px);
+  content: "";
+}
+// Виниловая пластинка за архивным снимком.
+.hero__media::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0.15rem;
+  width: 54%;
+  aspect-ratio: 1;
+  border: 1px solid #050405;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #f3e9ee 0 1.5%, #7c213a 1.8% 16.5%, #a04b61 17% 17.5%, transparent 18%),
+    repeating-radial-gradient(circle, #242025 0 2px, #383036 3px, #171518 4px 6px);
+  content: "";
+  pointer-events: none;
+}
+.hero__score {
+  z-index: 1;
+  position: relative;
+  display: block;
+  width: 128%;
+  height: auto;
+  aspect-ratio: 0.76;
+  object-fit: cover;
+  margin: 0 0 -0.35rem -28%;
+  transform: rotate(7deg);
+  border: 4px solid #fff;
+  background: #fff;
+  box-shadow: 0 4px 12px #1714151f;
+  filter: grayscale(1);
+}
+.hero__media figcaption {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 1rem;
+  margin-top: 0.9rem;
+  padding-block: 0.48rem;
+  border-block: 1px solid var(--line);
+  font-family: Georgia, serif;
+  font-size: 0.84rem;
+}
+.hero__media figcaption time {
+  color: var(--accent-ink);
+  font-variant-numeric: tabular-nums;
+}
+.hero__media:has(.hero__image[src$="brass-corner.svg"]) figcaption,
+.hero__media:has(.hero__image.image-unavailable) figcaption { visibility: hidden; }
+.hero__image { width: 100%; height: 100%; object-fit: cover; object-position: 50% 47%; filter: grayscale(1); }
+.hero__frame.photo-unavailable::after { content: none; }
+
+@media (max-width: v.$mobile) {
+  .hero__layout { grid-template-columns: 1fr; }
+  .hero h1 { font-size: clamp(2.75rem, 11vw, 4.5rem); }
+  .hero__media { width: 96%; max-width: 26rem; }
+}

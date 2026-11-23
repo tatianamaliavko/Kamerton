@@ -1,0 +1,4 @@
+.site-footer { background: var(--masthead); color: var(--masthead-ink); border-top: 1px solid var(--masthead-rule); }
+.site-footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1.1rem; padding-block: 2rem 4rem; }
+.site-footer p { margin-top: 0.35rem; color: var(--masthead-soft); font-size: 0.85rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 0.55rem 1.3rem; color: var(--masthead-soft); font-size: 0.9rem; }

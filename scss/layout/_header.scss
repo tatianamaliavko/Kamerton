@@ -1,0 +1,9 @@
+.site-header { background: var(--masthead); color: var(--masthead-ink); border-bottom: 1px solid var(--masthead-rule); }
+.site-header__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 4.5rem; gap: 0.4rem 1.5rem; padding-block: 0.8rem; }
+.brand { display: inline-flex; align-items: center; gap: 0.55rem; letter-spacing: 0.08em; font: 700 clamp(1.05rem, 2.1vw, 1.34rem)/1.15 Georgia, serif; text-decoration: none; }
+.brand-mark { display: flex; align-items: center; gap: 3px; height: 1.4rem; transform: skewX(-12deg); }
+.brand-mark i { width: 3px; height: 55%; border-radius: 1px; background: var(--masthead-soft); }
+.brand-mark i:nth-child(2) { height: 100%; }
+.skip-link { position: absolute; inset: 0 auto auto 0.7rem; z-index: 2; padding: 0.7rem; background: var(--paper); transform: translateY(-150%); }
+.skip-link:focus { transform: none; }
+.site-header :focus-visible, .site-footer :focus-visible { outline-color: #fff; }
