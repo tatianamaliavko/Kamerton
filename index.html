@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Камертон — магазин музыкальных инструментов.">
+    <title>Главная — Камертон</title>
+    <script src="scripts/theme.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/products.js" defer></script>
+    <script src="scripts/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Перейти к содержанию</a>
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>КАМЕРТОН</a>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <a href="index.html" aria-current="page">Главная</a>
+          <a href="catalog.html">Каталог</a>
+          <a class="nav-cart" href="cart.html">Корзина <span data-cart-count>0</span></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero"><div class="shell hero__layout">
+        <div class="hero__copy">
+          <p class="eyebrow">Магазин музыкальных инструментов</p>
+          <h1>Музыка <em>в твоих руках.</em></h1>
+          <p class="hero__intro">Гитары, клавишные и ударные для первых аккордов, джемов и живых выступлений.</p>
+          <a class="button button--primary" href="catalog.html">Смотреть каталог <span aria-hidden="true">↗</span></a>
+        </div>
+        <figure class="hero__media">
+          <div class="hero__frame"><img class="hero__image" src="https://historicalpix.com/cdn/shop/files/Coleman-Hawkins-and-Miles-Davis-1947-Historical-Pix-503_1600x.jpg?v=1687202491" data-fallback="assets/brass-corner.svg" data-fallback-alt="Иллюстрация трубы" alt="Коулмен Хокинс и Майлз Дэвис на джазовой сцене" fetchpriority="high" decoding="async"></div>
+          <img class="hero__score" src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Notenblatt-music-vintage-alt.jpg" data-fallback="assets/score-corner.svg" alt="" decoding="async">
+          <figcaption><span>Коулмен Хокинс и Майлз Дэвис</span><time datetime="1947">1947</time></figcaption>
+        </figure>
+      </div>
+      </section>
+      <div class="category-band">
+      <section class="shell section" aria-labelledby="category-title">
+        <div class="section-heading"><h2 id="category-title">Что будем играть?</h2><a href="catalog.html">Весь каталог <span aria-hidden="true">↗</span></a></div>
+        <div class="category-grid">
+          <article class="category-card">
+            <a href="catalog.html?category=guitars"><div class="category-card__media"><img src="https://images.pexels.com/photos/8044058/pexels-photo-8044058.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" data-fallback="https://images.pexels.com/photos/22234181/pexels-photo-22234181/free-photo-of-close-up-of-an-electric-guitar.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" decoding="async"></div><div class="category-card__copy"><div><h3>Гитары</h3><p>Акустика, электрогитары и басы</p></div><span aria-hidden="true">↗</span></div></a>
+          </article>
+          <article class="category-card">
+            <a href="catalog.html?category=keys"><div class="category-card__media"><img src="https://images.pexels.com/photos/15509340/pexels-photo-15509340/free-photo-of-piano-keyboard-in-studio.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" data-fallback="https://images.pexels.com/photos/9798752/pexels-photo-9798752.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" decoding="async"></div><div class="category-card__copy"><div><h3>Клавишные</h3><p>Пианино, синтезаторы и MIDI</p></div><span aria-hidden="true">↗</span></div></a>
+          </article>
+          <article class="category-card">
+            <a href="catalog.html?category=drums"><div class="category-card__media"><img src="https://images.pexels.com/photos/7715647/pexels-photo-7715647.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" data-fallback="https://images.pexels.com/photos/30169605/pexels-photo-30169605.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" decoding="async"></div><div class="category-card__copy"><div><h3>Ударные</h3><p>Установки и перкуссия</p></div><span aria-hidden="true">↗</span></div></a>
+          </article>
+          <article class="category-card category-card--accessories">
+            <a href="catalog.html?category=accessories"><div class="category-card__media"><img src="https://images.pexels.com/photos/10433472/pexels-photo-10433472.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" data-fallback="https://images.pexels.com/photos/12575726/pexels-photo-12575726.jpeg?auto=compress&amp;dpr=1&amp;h=750&amp;w=1260" alt="" loading="lazy" decoding="async"></div><div class="category-card__copy"><div><h3>Аксессуары</h3><p>Струны, стойки, комбики и многое другое</p></div><span aria-hidden="true">↗</span></div></a>
+          </article>
+        </div>
+      </section>
+      </div>
+      <section class="shell section home-featured" aria-labelledby="beginner-title">
+        <div class="section-heading"><div><h2 id="beginner-title">Первый инструмент</h2><p>Три варианта для занятий дома и первых репетиций.</p></div></div>
+        <div class="product-grid" data-featured></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div><a class="brand" href="index.html">КАМЕРТОН</a><p>Музыкальные инструменты и аксессуары</p></div>
+        <nav aria-label="Разделы каталога"><a href="catalog.html?category=guitars">Гитары</a><a href="catalog.html?category=keys">Клавишные</a><a href="catalog.html?category=drums">Ударные</a><a href="catalog.html?category=accessories">Аксессуары</a></nav>
+      </div>
+    </footer>
+    <button class="theme-toggle" type="button" aria-label="Включить тёмную тему" title="Включить тёмную тему"><span class="theme-toggle__icon" aria-hidden="true">☾</span></button>
+  </body>
+</html>
